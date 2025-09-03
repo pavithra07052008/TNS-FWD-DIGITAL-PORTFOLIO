@@ -1,0 +1,15 @@
+// Add event listener to send button
+document.querySelector('button').addEventListener('click', (e) => {
+    e.preventDefault();
+    // Get input values
+    const name = document.querySelector('input[type="text"]').value;
+    const email = document.querySelector('input[type="email"]').value;
+    const message = document.querySelector('textarea').value;
+    // Validate input
+    if (name && email && message) {
+        // Send message (you can add AJAX request here)
+        console.log('Message sent!');
+    } else {
+        console.log('Please fill out all fields.');
+    }
+});
